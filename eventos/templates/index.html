@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+</head>
+<body>
+    <h1>Eventos disponíveis</h1>
+
+    <ul>
+        {% for evento in eventos %}
+        <li>
+            <a href="{% url 'detalhe' evento.id %}">
+                {{ evento.titulo }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
